@@ -87,19 +87,156 @@
     <section class="py-16">
         <div class="container mx-auto">
             <div class="kodfun-galeri">
-                <div style="background-image: url('assets/fastX.jpg');"></div>
-                <div style="background-image: url('assets/Flash.jpg');"></div>
-                <div style="background-image: url('assets/John Wick.jpg');"></div>
-                <div style="background-image: url('assets/marvels.jpg');"></div>
-                <div style="background-image: url('assets/Shazam.jpg');"></div>
-                <div style="background-image: url('assets/GOTG3.jpg');"></div>
-                <div style="background-image: url('assets/transformers.jpg');"></div>
-                <div style="background-image: url('assets/spiderman.jpg');"></div>
-                <div style="background-image: url('assets/oppenheimer.jpeg');"></div>
-                <div style="background-image: url('assets/bluebeetle.jpg');"></div>
+                <div style="background-image: url('assets/fastX.jpg');">
+                    <div class="overlay" onclick="showMovieDetails('fastX')">
+                        <h4 class="text-white font-semibold">Fast X</h4>
+                        <p class="text-white">Rated:R 13+</p>
+                    </div>
+                </div>
+                <div style="background-image: url('assets/Flash.jpg');">
+                    <div class="overlay" onClick="showMovieDetails('flash')">
+                        <h4 class="text-white font-semibold">The Flash</h4>
+                        <p class="text-white">Rated:R 13+</p>
+                    </div>
+                </div>
+                <div style="background-image: url('assets/John Wick.jpg');">
+                    <div class="overlay" onClick="showMovieDetails('johnWick')">
+                        <h4 class="text-white font-semibold">John Wick</h4>
+                        <p class="text-white">Rated:R 13+</p>
+                    </div>
+                </div>
+                <div style="background-image: url('assets/marvels.jpg');">
+                    <div class="overlay" onClick="showMovieDetails('marvels')">
+                        <h4 class="text-white font-semibold">Marvels</h4>
+                        <p class="text-white">Rated:R 13+</p>
+                    </div>
+                </div>
+                <div style="background-image: url('assets/Shazam.jpg');">
+                    <div class="overlay" onClick="showMovieDetails('shazam')">
+                        <h4 class="text-white font-semibold">Shazam</h4>
+                        <p class="text-white">Rated:R 13+</p>
+                    </div>
+                </div>
+                <div style="background-image: url('assets/GOTG3.jpg');">
+                    <div class="overlay" onClick="showMovieDetails('gotg3')">
+                        <h4 class="text-white font-semibold">Guardian of the Galaxy Vol. 3</h4>
+                        <p class="text-white">Rated:R 13+</p>
+                    </div>
+                </div>
+                <div style="background-image: url('assets/transformers.jpg');">
+                    <div class="overlay" onClick="showMovieDetails('transformers')">
+                        <h4 class="text-white font-semibold">Transformers</h4>
+                        <p class="text-white">Rated:R 13+</p>
+                    </div>
+                </div>
+                <div style="background-image: url('assets/spiderman.jpg');">
+                    <div class="overlay" onClick="showMovieDetails('spiderman')">
+                        <h4 class="text-white font-semibold">Spiderman Across The Spider-Verse</h4>
+                        <p class="text-white">Rated:R 13+</p>
+                    </div>
+                </div>
+                <div style="background-image: url('assets/oppenheimer.jpeg');">
+                    <div class="overlay" onClick="showMovieDetails('oppenheimer')">
+                        <h4 class="text-white font-semibold">Oppenheimer</h4>
+                        <p class="text-white">Rated:R 13+</p>
+                    </div>
+                </div>
+                <div style="background-image: url('assets/bluebeetle.jpg');">
+                    <div class="overlay" onClick="showMovieDetails('bluebeetle')">
+                        <h4 class="text-white font-semibold">Blue Beetle</h4>
+                        <p class="text-white">Rated:R 13+</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Movie Details Popup -->
+    <div id="movieDetailsPopup" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg shadow-lg p-6 w-1/2">
+            <h2 id="movieTitle" class="text-2xl font-semibold mb-4"></h2>
+            <p id="movieSynopsis" class="text-gray-700 mb-4"></p>
+            <p id="movieActors" class="text-gray-700 mb-4"></p>
+            <p id="movieTicketPrice" class="text-gray-700 mb-4"></p>
+            <a href="booking.html" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded">Book Now</a>
+            <button id="closeMovieDetailsBtn" class="absolute top-0 right-0 mt-4 mr-4 text-gray-600 hover:text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path d="M19 6.41l-1.41-1.41L12 10.17 6.41 4.59 5 6l6 6-6 6 1.41 1.41L12 13.83l5.59 5.59 1.41-1.41L13.83 12l5.59-5.59z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function showMovieDetails(movieTitle) {
+        const movieDetailsPopup = document.getElementById('movieDetailsPopup');
+        const closeMovieDetailsBtn = document.getElementById('closeMovieDetailsBtn');
+        const movieTitleElement = document.getElementById('movieTitle');
+        const movieSynopsisElement = document.getElementById('movieSynopsis');
+        const movieActorsElement = document.getElementById('movieActors');
+        const movieTicketPriceElement = document.getElementById('movieTicketPrice');
+
+        // Set movie details based on the movieTitle parameter (you can customize this logic)
+        if (movieTitle === 'fastX') {
+                movieTitleElement.textContent = 'Fast & Furious X';
+                movieSynopsisElement.textContent = "Over many missions and against impossible odds, Dom Toretto and his family have outsmarted and outdriven every foe in their path. Now, they must confront the most lethal opponent they've ever faced. Fueled by revenge, a terrifying threat emerges from the shadows of the past to shatter Dom's world and destroy everything -- and everyone -- he loves.";
+                movieActorsElement.textContent = "Star: Vin Diesel, Michelle Rodriguez, Tyrese Gibson, Chris 'Ludacris' Bridges, John Cena";
+                movieTicketPriceElement.textContent = 'Ticket Price: $10';
+        } else if (movieTitle === 'flash') {
+                movieTitleElement.textContent = 'The Flash';
+                movieSynopsisElement.textContent = "Worlds collide when the Flash uses his superpowers to travel back in time to change the events of the past. However, when his attempt to save his family inadvertently alters the future, he becomes trapped in a reality in which General Zod has returned, threatening annihilation. With no other superheroes to turn to, the Flash looks to coax a very different Batman out of retirement and rescue an imprisoned Kryptonian -- albeit not the one he's looking for.";
+                movieActorsElement.textContent = "Ezra Miller, Sasha Calle, Michael Shannon, Ron Livingston, Maribel Verdú, Kiersey Clemons, Antje Traue, Michael Keaton";
+                movieTicketPriceElement.textContent = 'Ticket Price: $12';
+        } else if (movieTitle === 'johnWick') {
+                movieTitleElement.textContent = 'John Wick: Chapter 4';
+                movieSynopsisElement.textContent = "With the price on his head ever increasing, legendary hit man John Wick takes his fight against the High Table global as he seeks out the most powerful players in the underworld, from New York to Paris to Japan to Berlin.";
+                movieActorsElement.textContent = 'Keanu Reeves, Donnie Yen, Rina Sawayama, Shamier Anderson, Lance Reddick, Ian McShane, Laurence Fishburne';
+                movieTicketPriceElement.textContent = 'Ticket Price: $15';
+        } else if (movieTitle === 'marvels') {
+                movieTitleElement.textContent = 'The Marvels';
+                movieSynopsisElement.textContent = 'Carol Danvers, aka Captain Marvel, has reclaimed her identity from the tyrannical Kree and taken revenge on the Supreme Intelligence. However, unintended consequences see her shouldering the burden of a destabilized universe. When her duties send her to an anomalous wormhole linked to a Kree revolutionary, her powers become entangled with two other superheroes to form the Marvels.';
+                movieActorsElement.textContent = 'Brie Larson, Teyonah Parris, Iman Vellani, Zawe Ashton, Park Seo-joon, Samuel L. Jackson';
+                movieTicketPriceElement.textContent = 'Ticket Price: $10';
+        } else if (movieTitle === 'shazam') {
+                movieTitleElement.textContent = 'Shazam! Fury of the Gods';
+                movieSynopsisElement.textContent = 'Bestowed with the powers of the gods, Billy Batson and his fellow foster kids are still learning how to juggle teenage life with their adult superhero alter egos. When a vengeful trio of ancient gods arrives on Earth in search of the magic stolen from them long ago, Shazam and his allies get thrust into a battle for their superpowers, their lives, and the fate of the world.';
+                movieActorsElement.textContent = 'Zachary Levi, Asher Angel, Jack Dylan Grazer, Helen Mirren, Lucy Liu, Rachel Zegler, Djimon Hounsou';
+                movieTicketPriceElement.textContent = 'Ticket Price: $12';
+        } else if (movieTitle === 'gotg3') {
+                movieTitleElement.textContent = 'Guardians of the Galaxy Vol. 3';
+                movieSynopsisElement.textContent = 'Still reeling from the loss of Gamora, Peter Quill must rally his team to defend the universe and protect one of their own. If the mission is not completely successful, it could possibly lead to the end of the Guardians as we know them.';
+                movieActorsElement.textContent = 'Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel, Bradley Cooper, Pom Klementieff, Karen Gillan';
+                movieTicketPriceElement.textContent = 'Ticket Price: $12';
+        } else if (movieTitle === 'transformers') {
+                movieTitleElement.textContent = 'Transformers: Rise of the Beasts';
+                movieSynopsisElement.textContent = 'During the 1990s, the Maximals, Predacons and Terrorcons join the existing battle on Earth between Autobots and Decepticons.';
+                movieActorsElement.textContent = 'Anthony Ramos, Dominique Fishback, Luna Lauren Velez, Ron Perlman, Peter Cullen, Frank Welker';
+                movieTicketPriceElement.textContent = 'Ticket Price: $15';
+        } else if (movieTitle === 'spiderman') {
+                movieTitleElement.textContent = 'Spiderman Across the Spider-Verse';
+                movieSynopsisElement.textContent = "After reuniting with Gwen Stacy, Brooklyn's full-time, friendly neighborhood Spider-Man is catapulted across the Multiverse, where he encounters a team of Spider-People charged with protecting its very existence. However, when the heroes clash on how to handle a new threat, Miles finds himself pitted against the other Spiders. He must soon redefine what it means to be a hero so he can save the people he loves most.";
+                movieActorsElement.textContent = 'Shameik Moore, Hailee Steinfeld, Jake Johnson, Liev Schreiber, Oscar Isaac, Issa Rae, Brian Tyree Henry, Lauren Velez, Lily Tomlin';
+                movieTicketPriceElement.textContent = 'Ticket Price: $10';
+        } else if (movieTitle === 'oppenheimer') {
+                movieTitleElement.textContent = 'Oppenheimer';
+                movieSynopsisElement.textContent = "Physicist J Robert Oppenheimer works with a team of scientists during the Manhattan Project, leading to the development of the atomic bomb.";
+                movieActorsElement.textContent = "Robert Downey Jr., Matt Damon, Emily Blunt, Meryl Streep, Rami Malek, Ben Mendelsohn, T.R. Knight, Colin Firth";
+                movieTicketPriceElement.textContent = 'Ticket Price: $12';
+        } else if (movieTitle === 'bluebeetle') {
+                movieTitleElement.textContent = 'Blue Beetle';
+                movieSynopsisElement.textContent = "Jaime Reyes suddenly finds himself in possession of an ancient relic of alien biotechnology called the Scarab. When the Scarab chooses Jaime to be its symbiotic host, he's bestowed with an incredible suit of armor that's capable of extraordinary and unpredictable powers, forever changing his destiny as he becomes the superhero Blue Beetle.";
+                movieActorsElement.textContent = "Xolo Maridueña, Angel Manuel Soto";
+                movieTicketPriceElement.textContent = 'Ticket Price: $15';
+        }
+        
+        movieDetailsPopup.classList.remove('hidden');
+
+        closeMovieDetailsBtn.addEventListener('click', () => {
+            movieDetailsPopup.classList.add('hidden');
+        });
+    }
+    </script>
 
     <style>
     .kodfun-galeri {
@@ -114,12 +251,42 @@
         background-size: auto 100%;
         background-position: center;
         background-repeat: no-repeat;
+        position: relative;
         transition: all 0.8s cubic-bezier(0.25, 0.4, 0.45, 1.4);
+        overflow: hidden;
     }
 
     .kodfun-galeri > div:hover {
         flex: 5;
     }
+
+    .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.kodfun-galeri > div:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h4,
+.overlay p {
+    margin: 0;
+}
+
+.overlay h4 {
+    font-size: 1.5rem;
+}
+
+.overlay p {
+    font-size: 1rem;
+}
     </style>
 
 
