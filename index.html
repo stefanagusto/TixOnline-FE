@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TixOnline - Buy Movie Tickets Online</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -121,13 +123,10 @@
                 <video class="w-full" controls width="100%" height="100%">
                     <source src="assets/gotg3trailer.mp4" type="video/mp4">
                 </video>
-                <div
-                    class="overlay flex flex-col items-center justify-center absolute inset-0 opacity-0 transition-opacity duration-300">
-                    <h3 class="text-white text-2xl font-semibold mb-2">Video Title</h3>
-                    <p class="text-gray-400 mb-1">Duration: 2:30</p>
-                    <p class="text-gray-400">Genre: Action</p>
-                    <p class="text-gray-400">Rated: PG-13</p>
+                <div class="text-white mt-4">
+                    <h3 class="text-2xl font-semibold">Guardians of the Galaxy Vol.3 | Action, Adventure, Comedy | PG-13</h3>
                 </div>
+
             </div>
         </div>
     </section>
@@ -312,14 +311,14 @@
     </div>
 
     <script>
-        function showMovieDetails(movieTitle) {
-            const movieDetailsPopup = document.getElementById('movieDetailsPopup');
-            const closeMovieDetailsBtn = document.getElementById('closeMovieDetailsBtn');
-            const movieTitleElement = document.getElementById('movieTitle');
-            const movieSynopsisElement = document.getElementById('movieSynopsis');
-            const movieActorsElement = document.getElementById('movieActors');
-            const movieTicketPriceElement = document.getElementById('movieTicketPrice');
+        const movieDetailsPopup = document.getElementById('movieDetailsPopup');
+        const closeMovieDetailsBtn = document.getElementById('closeMovieDetailsBtn');
+        const movieTitleElement = document.getElementById('movieTitle');
+        const movieSynopsisElement = document.getElementById('movieSynopsis');
+        const movieActorsElement = document.getElementById('movieActors');
+        const movieTicketPriceElement = document.getElementById('movieTicketPrice');
 
+        function showMovieDetails(movieTitle) {
             // Set movie details based on the movieTitle parameter (you can customize this logic)
             if (movieTitle === 'fastX') {
                 movieTitleElement.textContent = 'Fast & Furious X';
