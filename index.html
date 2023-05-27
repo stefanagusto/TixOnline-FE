@@ -19,7 +19,9 @@
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-white text-2xl font-semibold">TixOnline</a>
             <div>
-                <a href="#" class="text-gray-300 hover:text-white px-4">Movies</a>
+                <a href="#" class="text-gray-300 hover:text-white px-4">Home</a>
+                <a href="#" class="text-gray-300 hover:text-white px-4">Now Playing</a>
+                <a href="#" class="text-gray-300 hover:text-white px-4">Coming Soon</a>
                 <a href="#" class="text-gray-300 hover:text-white px-4">Theaters</a>
                 <a href="#" class="text-gray-300 hover:text-white px-4">About</a>
             </div>
@@ -29,7 +31,7 @@
             </div>
         </div>
     </nav>
-    
+
 
     <!-- Registration Modal -->
     <div id="registerModal" class="fixed inset-0 flex items-center justify-center z-50 hidden">
@@ -37,25 +39,50 @@
             <h2 class="text-2xl font-semibold mb-4">Register</h2>
             <form>
                 <div class="mb-4">
+                    <label for="username" class="block text-gray-700 font-semibold mb-2">Username</label>
+                    <input type="text" id="username" name="username"
+                        class="border border-gray-300 rounded px-4 py-2 w-full" required>
+                </div>
+                <div class="mb-4">
                     <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
-                    <input type="email" id="email" name="email" class="border border-gray-300 rounded px-4 py-2 w-full" required>
+                    <input type="email" id="email" name="email" class="border border-gray-300 rounded px-4 py-2 w-full"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-gray-700 font-semibold mb-2">Password</label>
+                    <input type="password" id="password" name="password"
+                        class="border border-gray-300 rounded px-4 py-2 w-full" required>
+                </div>
+                <div class="mb-4">
+                    <label for="firstName" class="block text-gray-700 font-semibold mb-2">First Name</label>
+                    <input type="text" id="firstName" name="firstName"
+                        class="border border-gray-300 rounded px-4 py-2 w-full" required>
+                </div>
+                <div class="mb-4">
+                    <label for="lastName" class="block text-gray-700 font-semibold mb-2">Last Name</label>
+                    <input type="text" id="lastName" name="lastName"
+                        class="border border-gray-300 rounded px-4 py-2 w-full" required>
                 </div>
                 <div class="mb-6">
-                    <label for="password" class="block text-gray-700 font-semibold mb-2">Password</label>
-                    <input type="password" id="password" name="password" class="border border-gray-300 rounded px-4 py-2 w-full" required>
+                    <label for="phoneNumber" class="block text-gray-700 font-semibold mb-2">Phone Number</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber"
+                        class="border border-gray-300 rounded px-4 py-2 w-full" required>
                 </div>
                 <div class="text-right">
-                    <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded">Register</button>
+                    <button type="submit"
+                        class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded">Register</button>
                 </div>
             </form>
             <button id="closeModalBtn" class="absolute top-0 right-0 mt-4 mr-4 text-gray-600 hover:text-gray-800">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6">
                     <path fill="none" d="M0 0h24v24H0z" />
-                    <path d="M19 6.41l-1.41-1.41L12 10.17 6.41 4.59 5 6l6 6-6 6 1.41 1.41L12 13.83l5.59 5.59 1.41-1.41L13.83 12l5.59-5.59z" />
+                    <path
+                        d="M19 6.41l-1.41-1.41L12 10.17 6.41 4.59 5 6l6 6-6 6 1.41 1.41L12 13.83l5.59 5.59 1.41-1.41L13.83 12l5.59-5.59z" />
                 </svg>
             </button>
         </div>
     </div>
+
 
     <!-- Login Modal -->
     <div id="loginModal" class="fixed inset-0 flex items-center justify-center z-50 hidden">
@@ -64,28 +91,57 @@
             <form>
                 <div class="mb-4">
                     <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
-                    <input type="email" id="email" name="email" class="border border-gray-300 rounded px-4 py-2 w-full" required>
+                    <input type="email" id="email" name="email" class="border border-gray-300 rounded px-4 py-2 w-full"
+                        required>
                 </div>
                 <div class="mb-6">
                     <label for="password" class="block text-gray-700 font-semibold mb-2">Password</label>
-                    <input type="password" id="password" name="password" class="border border-gray-300 rounded px-4 py-2 w-full" required>
+                    <input type="password" id="password" name="password"
+                        class="border border-gray-300 rounded px-4 py-2 w-full" required>
                 </div>
                 <div class="text-right">
-                    <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded">Login</button>
+                    <button type="submit"
+                        class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded">Login</button>
                 </div>
             </form>
             <button id="closeLoginModalBtn" class="absolute top-0 right-0 mt-4 mr-4 text-gray-600 hover:text-gray-800">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6">
                     <path fill="none" d="M0 0h24v24H0z" />
-                    <path d="M19 6.41l-1.41-1.41L12 10.17 6.41 4.59 5 6l6 6-6 6 1.41 1.41L12 13.83l5.59 5.59 1.41-1.41L13.83 12l5.59-5.59z" />
+                    <path
+                        d="M19 6.41l-1.41-1.41L12 10.17 6.41 4.59 5 6l6 6-6 6 1.41 1.41L12 13.83l5.59 5.59 1.41-1.41L13.83 12l5.59-5.59z" />
                 </svg>
             </button>
         </div>
     </div>
 
-    <!-- Movie Gallery Section -->
+    <!-- Video Trailer-->
+    <section class="bg-gray-900">
+        <div class="container mx-auto p-6">
+            <div class="relative">
+                <video class="w-full" controls width="100%" height="100%">
+                    <source src="assets/gotg3trailer.mp4" type="video/mp4">
+                </video>
+                <div
+                    class="overlay flex flex-col items-center justify-center absolute inset-0 opacity-0 transition-opacity duration-300">
+                    <h3 class="text-white text-2xl font-semibold mb-2">Video Title</h3>
+                    <p class="text-gray-400 mb-1">Duration: 2:30</p>
+                    <p class="text-gray-400">Genre: Action</p>
+                    <p class="text-gray-400">Rated: PG-13</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Now Playing Movie Gallery Section -->
     <section class="py-16">
         <div class="container mx-auto">
+            <h1 class="text-2xl font-semibold mb-4">Now Playing
+            </h1>
+            <h2 class="text-xl font-semibold mb-4">
+                Jakarta | Grand Indonesia | XXI
+            </h2>
+
             <div class="kodfun-galeri">
                 <div style="background-image: url('assets/fastX.jpg');">
                     <div class="overlay" onclick="showMovieDetails('fastX')">
@@ -151,6 +207,90 @@
         </div>
     </section>
 
+    <!-- Hero Section -->
+    <section class="bg-gray-100 py-20">
+        <div class="container mx-auto">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl font-semibold mb-6">Welcome to TixOnline</h1>
+                <p class="text-lg text-gray-700 mb-8">Buy movie tickets online and never miss your favorite movies
+                    again!</p>
+                <a href="#" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-6 rounded">Get
+                    Started</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Coming Soon Movie Gallery Section -->
+    <section class="py-16">
+        <div class="container mx-auto">
+            <h1 class="text-2xl font-semibold mb-4">Coming Soon | Jakarta</h1>
+            <div class="kodfun-galeri">
+                <div class="kodfun-galeri">
+                    <div style="background-image: url('assets/fastX.jpg');">
+                        <div class="overlay" onclick="showMovieDetails('fastX')">
+                            <h4 class="text-white font-semibold">Fast X</h4>
+                            <p class="text-white">Rated:R 13+</p>
+                        </div>
+                    </div>
+                    <div style="background-image: url('assets/Flash.jpg');">
+                        <div class="overlay" onClick="showMovieDetails('flash')">
+                            <h4 class="text-white font-semibold">The Flash</h4>
+                            <p class="text-white">Rated:R 13+</p>
+                        </div>
+                    </div>
+                    <div style="background-image: url('assets/John Wick.jpg');">
+                        <div class="overlay" onClick="showMovieDetails('johnWick')">
+                            <h4 class="text-white font-semibold">John Wick</h4>
+                            <p class="text-white">Rated:R 13+</p>
+                        </div>
+                    </div>
+                    <div style="background-image: url('assets/marvels.jpg');">
+                        <div class="overlay" onClick="showMovieDetails('marvels')">
+                            <h4 class="text-white font-semibold">Marvels</h4>
+                            <p class="text-white">Rated:R 13+</p>
+                        </div>
+                    </div>
+                    <div style="background-image: url('assets/Shazam.jpg');">
+                        <div class="overlay" onClick="showMovieDetails('shazam')">
+                            <h4 class="text-white font-semibold">Shazam</h4>
+                            <p class="text-white">Rated:R 13+</p>
+                        </div>
+                    </div>
+                    <div style="background-image: url('assets/GOTG3.jpg');">
+                        <div class="overlay" onClick="showMovieDetails('gotg3')">
+                            <h4 class="text-white font-semibold">Guardian of the Galaxy Vol. 3</h4>
+                            <p class="text-white">Rated:R 13+</p>
+                        </div>
+                    </div>
+                    <div style="background-image: url('assets/transformers.jpg');">
+                        <div class="overlay" onClick="showMovieDetails('transformers')">
+                            <h4 class="text-white font-semibold">Transformers</h4>
+                            <p class="text-white">Rated:R 13+</p>
+                        </div>
+                    </div>
+                    <div style="background-image: url('assets/spiderman.jpg');">
+                        <div class="overlay" onClick="showMovieDetails('spiderman')">
+                            <h4 class="text-white font-semibold">Spiderman Across The Spider-Verse</h4>
+                            <p class="text-white">Rated:R 13+</p>
+                        </div>
+                    </div>
+                    <div style="background-image: url('assets/oppenheimer.jpeg');">
+                        <div class="overlay" onClick="showMovieDetails('oppenheimer')">
+                            <h4 class="text-white font-semibold">Oppenheimer</h4>
+                            <p class="text-white">Rated:R 13+</p>
+                        </div>
+                    </div>
+                    <div style="background-image: url('assets/bluebeetle.jpg');">
+                        <div class="overlay" onClick="showMovieDetails('bluebeetle')">
+                            <h4 class="text-white font-semibold">Blue Beetle</h4>
+                            <p class="text-white">Rated:R 13+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
     <!-- Movie Details Popup -->
     <div id="movieDetailsPopup" class="fixed inset-0 flex items-center justify-center z-50 hidden">
         <div class="bg-white rounded-lg shadow-lg p-6 w-1/2">
@@ -158,11 +298,14 @@
             <p id="movieSynopsis" class="text-gray-700 mb-4"></p>
             <p id="movieActors" class="text-gray-700 mb-4"></p>
             <p id="movieTicketPrice" class="text-gray-700 mb-4"></p>
-            <a href="booking.html" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded">Book Now</a>
-            <button id="closeMovieDetailsBtn" class="absolute top-0 right-0 mt-4 mr-4 text-gray-600 hover:text-gray-800">
+            <a href="booking.html" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded">Book
+                Now</a>
+            <button id="closeMovieDetailsBtn"
+                class="absolute top-0 right-0 mt-4 mr-4 text-gray-600 hover:text-gray-800">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6">
                     <path fill="none" d="M0 0h24v24H0z" />
-                    <path d="M19 6.41l-1.41-1.41L12 10.17 6.41 4.59 5 6l6 6-6 6 1.41 1.41L12 13.83l5.59 5.59 1.41-1.41L13.83 12l5.59-5.59z" />
+                    <path
+                        d="M19 6.41l-1.41-1.41L12 10.17 6.41 4.59 5 6l6 6-6 6 1.41 1.41L12 13.83l5.59 5.59 1.41-1.41L13.83 12l5.59-5.59z" />
                 </svg>
             </button>
         </div>
@@ -170,147 +313,137 @@
 
     <script>
         function showMovieDetails(movieTitle) {
-        const movieDetailsPopup = document.getElementById('movieDetailsPopup');
-        const closeMovieDetailsBtn = document.getElementById('closeMovieDetailsBtn');
-        const movieTitleElement = document.getElementById('movieTitle');
-        const movieSynopsisElement = document.getElementById('movieSynopsis');
-        const movieActorsElement = document.getElementById('movieActors');
-        const movieTicketPriceElement = document.getElementById('movieTicketPrice');
+            const movieDetailsPopup = document.getElementById('movieDetailsPopup');
+            const closeMovieDetailsBtn = document.getElementById('closeMovieDetailsBtn');
+            const movieTitleElement = document.getElementById('movieTitle');
+            const movieSynopsisElement = document.getElementById('movieSynopsis');
+            const movieActorsElement = document.getElementById('movieActors');
+            const movieTicketPriceElement = document.getElementById('movieTicketPrice');
 
-        // Set movie details based on the movieTitle parameter (you can customize this logic)
-        if (movieTitle === 'fastX') {
+            // Set movie details based on the movieTitle parameter (you can customize this logic)
+            if (movieTitle === 'fastX') {
                 movieTitleElement.textContent = 'Fast & Furious X';
                 movieSynopsisElement.textContent = "Over many missions and against impossible odds, Dom Toretto and his family have outsmarted and outdriven every foe in their path. Now, they must confront the most lethal opponent they've ever faced. Fueled by revenge, a terrifying threat emerges from the shadows of the past to shatter Dom's world and destroy everything -- and everyone -- he loves.";
                 movieActorsElement.textContent = "Star: Vin Diesel, Michelle Rodriguez, Tyrese Gibson, Chris 'Ludacris' Bridges, John Cena";
                 movieTicketPriceElement.textContent = 'Ticket Price: $10';
-        } else if (movieTitle === 'flash') {
+            } else if (movieTitle === 'flash') {
                 movieTitleElement.textContent = 'The Flash';
                 movieSynopsisElement.textContent = "Worlds collide when the Flash uses his superpowers to travel back in time to change the events of the past. However, when his attempt to save his family inadvertently alters the future, he becomes trapped in a reality in which General Zod has returned, threatening annihilation. With no other superheroes to turn to, the Flash looks to coax a very different Batman out of retirement and rescue an imprisoned Kryptonian -- albeit not the one he's looking for.";
                 movieActorsElement.textContent = "Ezra Miller, Sasha Calle, Michael Shannon, Ron Livingston, Maribel Verdú, Kiersey Clemons, Antje Traue, Michael Keaton";
                 movieTicketPriceElement.textContent = 'Ticket Price: $12';
-        } else if (movieTitle === 'johnWick') {
+            } else if (movieTitle === 'johnWick') {
                 movieTitleElement.textContent = 'John Wick: Chapter 4';
                 movieSynopsisElement.textContent = "With the price on his head ever increasing, legendary hit man John Wick takes his fight against the High Table global as he seeks out the most powerful players in the underworld, from New York to Paris to Japan to Berlin.";
                 movieActorsElement.textContent = 'Keanu Reeves, Donnie Yen, Rina Sawayama, Shamier Anderson, Lance Reddick, Ian McShane, Laurence Fishburne';
                 movieTicketPriceElement.textContent = 'Ticket Price: $15';
-        } else if (movieTitle === 'marvels') {
+            } else if (movieTitle === 'marvels') {
                 movieTitleElement.textContent = 'The Marvels';
                 movieSynopsisElement.textContent = 'Carol Danvers, aka Captain Marvel, has reclaimed her identity from the tyrannical Kree and taken revenge on the Supreme Intelligence. However, unintended consequences see her shouldering the burden of a destabilized universe. When her duties send her to an anomalous wormhole linked to a Kree revolutionary, her powers become entangled with two other superheroes to form the Marvels.';
                 movieActorsElement.textContent = 'Brie Larson, Teyonah Parris, Iman Vellani, Zawe Ashton, Park Seo-joon, Samuel L. Jackson';
                 movieTicketPriceElement.textContent = 'Ticket Price: $10';
-        } else if (movieTitle === 'shazam') {
+            } else if (movieTitle === 'shazam') {
                 movieTitleElement.textContent = 'Shazam! Fury of the Gods';
                 movieSynopsisElement.textContent = 'Bestowed with the powers of the gods, Billy Batson and his fellow foster kids are still learning how to juggle teenage life with their adult superhero alter egos. When a vengeful trio of ancient gods arrives on Earth in search of the magic stolen from them long ago, Shazam and his allies get thrust into a battle for their superpowers, their lives, and the fate of the world.';
                 movieActorsElement.textContent = 'Zachary Levi, Asher Angel, Jack Dylan Grazer, Helen Mirren, Lucy Liu, Rachel Zegler, Djimon Hounsou';
                 movieTicketPriceElement.textContent = 'Ticket Price: $12';
-        } else if (movieTitle === 'gotg3') {
+            } else if (movieTitle === 'gotg3') {
                 movieTitleElement.textContent = 'Guardians of the Galaxy Vol. 3';
                 movieSynopsisElement.textContent = 'Still reeling from the loss of Gamora, Peter Quill must rally his team to defend the universe and protect one of their own. If the mission is not completely successful, it could possibly lead to the end of the Guardians as we know them.';
                 movieActorsElement.textContent = 'Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel, Bradley Cooper, Pom Klementieff, Karen Gillan';
                 movieTicketPriceElement.textContent = 'Ticket Price: $12';
-        } else if (movieTitle === 'transformers') {
+            } else if (movieTitle === 'transformers') {
                 movieTitleElement.textContent = 'Transformers: Rise of the Beasts';
                 movieSynopsisElement.textContent = 'During the 1990s, the Maximals, Predacons and Terrorcons join the existing battle on Earth between Autobots and Decepticons.';
                 movieActorsElement.textContent = 'Anthony Ramos, Dominique Fishback, Luna Lauren Velez, Ron Perlman, Peter Cullen, Frank Welker';
                 movieTicketPriceElement.textContent = 'Ticket Price: $15';
-        } else if (movieTitle === 'spiderman') {
+            } else if (movieTitle === 'spiderman') {
                 movieTitleElement.textContent = 'Spiderman Across the Spider-Verse';
                 movieSynopsisElement.textContent = "After reuniting with Gwen Stacy, Brooklyn's full-time, friendly neighborhood Spider-Man is catapulted across the Multiverse, where he encounters a team of Spider-People charged with protecting its very existence. However, when the heroes clash on how to handle a new threat, Miles finds himself pitted against the other Spiders. He must soon redefine what it means to be a hero so he can save the people he loves most.";
                 movieActorsElement.textContent = 'Shameik Moore, Hailee Steinfeld, Jake Johnson, Liev Schreiber, Oscar Isaac, Issa Rae, Brian Tyree Henry, Lauren Velez, Lily Tomlin';
                 movieTicketPriceElement.textContent = 'Ticket Price: $10';
-        } else if (movieTitle === 'oppenheimer') {
+            } else if (movieTitle === 'oppenheimer') {
                 movieTitleElement.textContent = 'Oppenheimer';
                 movieSynopsisElement.textContent = "Physicist J Robert Oppenheimer works with a team of scientists during the Manhattan Project, leading to the development of the atomic bomb.";
                 movieActorsElement.textContent = "Robert Downey Jr., Matt Damon, Emily Blunt, Meryl Streep, Rami Malek, Ben Mendelsohn, T.R. Knight, Colin Firth";
                 movieTicketPriceElement.textContent = 'Ticket Price: $12';
-        } else if (movieTitle === 'bluebeetle') {
+            } else if (movieTitle === 'bluebeetle') {
                 movieTitleElement.textContent = 'Blue Beetle';
                 movieSynopsisElement.textContent = "Jaime Reyes suddenly finds himself in possession of an ancient relic of alien biotechnology called the Scarab. When the Scarab chooses Jaime to be its symbiotic host, he's bestowed with an incredible suit of armor that's capable of extraordinary and unpredictable powers, forever changing his destiny as he becomes the superhero Blue Beetle.";
                 movieActorsElement.textContent = "Xolo Maridueña, Angel Manuel Soto";
                 movieTicketPriceElement.textContent = 'Ticket Price: $15';
-        }
-        
-        movieDetailsPopup.classList.remove('hidden');
+            }
 
-        closeMovieDetailsBtn.addEventListener('click', () => {
-            movieDetailsPopup.classList.add('hidden');
-        });
-    }
+            movieDetailsPopup.classList.remove('hidden');
+
+            closeMovieDetailsBtn.addEventListener('click', () => {
+                movieDetailsPopup.classList.add('hidden');
+            });
+        }
     </script>
 
     <style>
-    .kodfun-galeri {
-        display: flex;
-        height: 20rem;
-        gap: 1rem;
-    }
+        .kodfun-galeri {
+            display: flex;
+            height: 20rem;
+            gap: 1rem;
+        }
 
-    .kodfun-galeri > div {
-        flex: 1;
-        border-radius: 1rem;
-        background-size: auto 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        position: relative;
-        transition: all 0.8s cubic-bezier(0.25, 0.4, 0.45, 1.4);
-        overflow: hidden;
-    }
+        .kodfun-galeri>div {
+            flex: 1;
+            border-radius: 1rem;
+            background-size: auto 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            transition: all 0.8s cubic-bezier(0.25, 0.4, 0.45, 1.4);
+            overflow: hidden;
+        }
 
-    .kodfun-galeri > div:hover {
-        flex: 5;
-    }
+        .kodfun-galeri>div:hover {
+            flex: 5;
+        }
 
-    .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    opacity: 0;
-    transition: opacity 0.3s;
-}
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
 
-.kodfun-galeri > div:hover .overlay {
-    opacity: 1;
-}
+        .kodfun-galeri>div:hover .overlay {
+            opacity: 1;
+        }
 
-.overlay h4,
-.overlay p {
-    margin: 0;
-}
+        .overlay h4,
+        .overlay p {
+            margin: 0;
+        }
 
-.overlay h4 {
-    font-size: 1.5rem;
-}
+        .overlay h4 {
+            font-size: 1.5rem;
+        }
 
-.overlay p {
-    font-size: 1rem;
-}
+        .overlay p {
+            font-size: 1rem;
+        }
     </style>
 
-
-
-    <!-- Hero Section -->
-    <section class="bg-gray-100 py-20">
-        <div class="container mx-auto">
-            <div class="max-w-4xl mx-auto text-center">
-                <h1 class="text-4xl font-semibold mb-6">Welcome to TixOnline</h1>
-                <p class="text-lg text-gray-700 mb-8">Buy movie tickets online and never miss your favorite movies again!</p>
-                <a href="#" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-6 rounded">Get Started</a>
-            </div>
-        </div>
-    </section>
 
     <!-- Features Section -->
     <section class="bg-white py-16">
         <div class="container mx-auto">
             <div class="max-w-4xl mx-auto text-center">
                 <h2 class="text-3xl font-semibold mb-6">Why Choose TixOnline?</h2>
-                <p class="text-lg text-gray-700 mb-8">Experience the convenience of buying movie tickets online with TixOnline.</p>
+                <p class="text-lg text-gray-700 mb-8">Experience the convenience of buying movie tickets online with
+                    TixOnline.</p>
                 <div class="flex flex-wrap justify-center">
                     <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-12 w-12 mx-auto mb-4 text-red-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            class="h-12 w-12 mx-auto mb-4 text-red-600">
                             <path fill="none" d="M0 0h24v24H0z" />
                             <path
                                 d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm0 3a2 2 0 1 1-.001 3.999A2 2 0 0 1 11 7zm2 9H9v-2h4v2z"
@@ -320,17 +453,20 @@
                         <p class="text-gray-700">Book your movie tickets in just a few clicks without any hassle.</p>
                     </div>
                     <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-12 w-12 mx-auto mb-4 text-red-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            class="h-12 w-12 mx-auto mb-4 text-red-600">
                             <path fill="none" d="M0 0h24v24H0z" />
                             <path
                                 d="M20 11H4v2h16v-2zm0-4H4v2h16V7zm0 8H4v2h16v-2zm0 4h-2v2h2v-2zm2-8h-2v2h2v-2zm0-4h-2v2h2V7zm0 8h-2v2h2v-2zm0 4h-2v2h2v-2zm2-8h-2v2h2v-2zm0-4h-2v2h2V7zm0 8h-2v2h2v-2zm0 4h-2v2h2v-2zm2-8h-2v2h2v-2zm0-4h-2v2h2V7zm0 8h-2v2h2v-2zm0 4h-2v2h2v-2zm2-8h-2v2h2v-2z"
                                 fill="rgba(255,255,255,1)" />
                         </svg>
                         <h3 class="text-xl font-semibold mb-2">Wide Movie Selection</h3>
-                        <p class="text-gray-700">Choose from a wide range of movies and genres to suit your preferences.</p>
+                        <p class="text-gray-700">Choose from a wide range of movies and genres to suit your preferences.
+                        </p>
                     </div>
                     <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-12 w-12 mx-auto mb-4 text-red-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            class="h-12 w-12 mx-auto mb-4 text-red-600">
                             <path fill="none" d="M0 0h24v24H0z" />
                             <path
                                 d="M12 2L2 7l10 5 10-5-10-5zm0 2.276L20.566 7 12 11.724 3.434 7 12 4.276zm0 11.448L2 13l10-5 10 5-10 5zm0 2.276L20.566 19 12 14.276 3.434 19 12 21.724z"
