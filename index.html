@@ -16,15 +16,15 @@
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-cfab7a  text-2xl font-semibold">TixOnline</a>
             <div>
-                <a href="#" class="text-cfab7a hover:text-white px-4">Home</a>
-                <a href="#" class="text-cfab7a hover:text-white px-4">Now Playing</a>
-                <a href="#" class="text-cfab7a hover:text-white px-4">Coming Soon</a>
-                <a href="#" class="text-cfab7a hover:text-white px-4">Theaters</a>
-                <a href="#" class="text-cfab7a hover:text-white px-4">About</a>
+                <a href="#home" class="text-cfab7a hover:text-white px-4">Home</a>
+                <a href="#nowplaying" class="text-cfab7a hover:text-white px-4">Now Playing</a>
+                <a href="#comingsoon" class="text-cfab7a hover:text-white px-4">Coming Soon</a>
+                <a href="#theaters" class="text-cfab7a hover:text-white px-4">Theaters</a>
+                <a href="#about" class="text-cfab7a hover:text-white px-4">About</a>
             </div>
             <div>
-                <button id="registerBtn" class="bg-white text-gray-800 rounded py-2 px-4">Register</button>
-                <button id="loginBtn" class="bg-white text-gray-800 rounded py-2 px-4">Login</button>
+                <button id="registerBtn" class="custom-btn rounded py-2 px-4">Register</button>
+                <button id="loginBtn" class="custom-btn rounded py-2 px-4">Login</button>
             </div>
         </div>
     </nav>
@@ -68,7 +68,7 @@
                     <button type="submit"
                         class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded">Register</button>
                 </div>
-            </form>viewBox="0 0 24 24" class="h-6 w-6 close-icon">
+            </form>
             <path fill="none" d="M0 0h24v24H0z" />
             <path
                 d="M19 6.41l-1.41-1.41L12 10.17 6.41 4.59 5 6l6 6-6 6 1.41 1.41L12 13.83l5.59 5.59 1.41-1.41L13.83 12l5.59-5.59z" />
@@ -114,7 +114,7 @@
     </div>
 
     <!-- Video Trailer-->
-    <section class="bg-black">
+    <section id="home" class="bg-black">
         <div class="container mx-auto p-6">
             <div class="relative">
                 <video class="w-full" controls width="100%" height="100%">
@@ -130,7 +130,7 @@
     </section>
 
     <!-- Now Playing Movie Gallery Section -->
-    <section class="bg-black py-16">
+    <section id="nowplaying" class="bg-black py-16">
         <div class="container mx-auto">
             <h1 class="text-cfab7a text-2xl font-semibold mb-4">Now Playing
             </h1>
@@ -217,7 +217,7 @@
     </section>
 
     <!-- Coming Soon Movie Gallery Section -->
-    <section class="bg-black py-16">
+    <section id="comingsoon" class="bg-black py-16">
         <div class="container mx-auto">
             <h1 class="text-2xl text-cfab7a font-semibold mb-4">Coming Soon | Jakarta</h1>
             <div class="kodfun-galeri">
@@ -307,7 +307,7 @@
     </div>
 
     <!-- Features Section -->
-    <section class="bg-black py-16">
+    <section id="about" class="bg-black py-16">
         <div class="container mx-auto">
             <div class="max-w-4xl mx-auto text-center">
                 <h2 class="text-cfab7a text-3xl font-semibold mb-6">Why Choose TixOnline?</h2>

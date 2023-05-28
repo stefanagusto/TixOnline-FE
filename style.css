@@ -58,3 +58,8 @@ body{
 .close-icon {
     fill: white;
 }
+
+.custom-btn {
+    background-color: #cfab7a;
+    color: black;
+}
